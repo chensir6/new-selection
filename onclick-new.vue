@@ -312,7 +312,7 @@
             <p>上传进度</p>
             <el-progress
               :percentage="percentage"
-              :strokeWidth="10"
+              :stroke-width="10"
             ></el-progress>
           </div>
         </div>
@@ -329,11 +329,11 @@
               tooltip-effect="dark"
               @selection-change="handleSelectionChange"
             >
-              <el-table-column type="selection" width="55"> </el-table-column>
-              <el-table-column label="店铺ID" width="120">
+              <el-table-column type="selection" width="55" show-overflow-tooltip> </el-table-column>
+              <el-table-column label="店铺ID" width="120" show-overflow-tooltip>
                 <template slot-scope="scope">{{ scope.row.date }}</template>
               </el-table-column>
-              <el-table-column prop="name" label="店铺名称" width="120">
+              <el-table-column prop="name" label="店铺名称" width="120" show-overflow-tooltip>
               </el-table-column>
               <el-table-column
                 prop="address"
@@ -585,6 +585,10 @@ export default {
     .el-button {
       margin-right: 15px;
     }
+    /deep/ .el-progress-bar__outer {
+      width: 325px;
+      margin: 0 10px;
+    }
   }
   .onclicknew-table {
     .table-box {
@@ -606,7 +610,7 @@ export default {
     height: 28px;
   }
   /deep/ .el-checkbox__label {
-    color: @tabColor
+    color: @tabColor;
   }
   .solid {
     border-bottom: 1px solid #cccccc;

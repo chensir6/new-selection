@@ -115,6 +115,7 @@ export default {
             transition: all 0.3s;
             &:hover {
               color: @activeColor;
+              cursor: pointer;
             }
           }
         }
